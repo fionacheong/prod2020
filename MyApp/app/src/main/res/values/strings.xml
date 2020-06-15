@@ -20,4 +20,5 @@
     <string name="initialise" />
     <string name="create_acc">CREATE NEW ACCOUNT</string>
     <string name="registerbtn">register</string>
+    <string name="logout">Logout</string>
 </resources>

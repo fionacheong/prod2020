@@ -2,10 +2,10 @@ package com.example.myapp
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         goToAddTask.setOnClickListener {
             startActivity(Intent(this, AddTaskActivity::class.java))
@@ -38,11 +37,26 @@ class MainActivity : AppCompatActivity() {
 
         //val alltasks = listOf()
 
+        calendar.setOnClickListener {
+            startActivity(Intent(this, Calendar::class.java))
+        }
+
+        timer.setOnClickListener {
+            startActivity(Intent(this, Timer::class.java))
+        }
+
     }
 
-    fun logout(view: View?) {
+    fun logout(view: View) {
         FirebaseAuth.getInstance().signOut()
         startActivity(Intent(applicationContext, login::class.java))
         finish()
     }
+
+
 }
+
+
+
+
+

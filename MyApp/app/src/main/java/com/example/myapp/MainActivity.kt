@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapp.util.TaskLibraryActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -43,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         timer.setOnClickListener {
             startActivity(Intent(this, Timer::class.java))
+        }
+
+        libraryButton.setOnClickListener {
+            startActivity(Intent(this, TaskLibraryActivity::class.java))
         }
 
     }
